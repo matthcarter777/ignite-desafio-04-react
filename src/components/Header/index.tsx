@@ -29,16 +29,3 @@ export function Header({ openModal }:  HeaderProps)  {
     </Container>
   );
 }
-
-
-/* class Header extends Component {
-  render() {
-    const { openModal } = this.props;
-
-    return (
-      
-    )
-  }
-};
-
-export default Header; */
