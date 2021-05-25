@@ -15,9 +15,11 @@ interface FoodProps {
 
 interface FoodComponentProps {
   food: FoodProps;
+  handleDelete: (id: number) => void;
+  handleEditFood: (food: FoodProps) => void;
 }
 
-export function Food({ food }: FoodComponentProps) {
+export function Food({ food, handleDelete, handleEditFood }: FoodComponentProps) {
   const [ isAvailable, setIsAvailable ] = useState(false);
   
 
@@ -47,7 +49,7 @@ export function Food({ food }: FoodComponentProps) {
           <button
             type="button"
             className="icon"
-            /* onClick={this.setEditingFood} */
+            onClick={() => handleEditFood(food)}
             data-testid={`edit-food-${food.id}`}
           >
             <FiEdit3 size={20} />
@@ -56,7 +58,7 @@ export function Food({ food }: FoodComponentProps) {
           <button
             type="button"
             className="icon"
-            /* onClick={() => handleDelete(food.id)} */
+            onClick={() => handleDelete(food.id)}
             data-testid={`remove-food-${food.id}`}
           >
             <FiTrash size={20} />
