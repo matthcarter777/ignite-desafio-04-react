@@ -29,7 +29,7 @@
       "name": "teste",
       "price": "19",
       "description": "teste de prato",
-      "available": false,
+      "available": true,
       "id": 4
     },
     {
