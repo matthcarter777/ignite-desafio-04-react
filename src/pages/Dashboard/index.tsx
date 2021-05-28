@@ -49,16 +49,14 @@ export function Dashboard() {
 
   const handleUpdateFood = async (food: FoodProps) => {
     try {
+      setEditModalOpen(true);
       const foodUpdated = await api.put(
         `/foods/${editingFood.id}`,
         { ...editingFood, ...food },
       );
-
-      const foodsUpdated = foods.map(f =>
-        f.id !== foodUpdated.data.id ? f : foodUpdated.data,
-      );
-
-      setFoods(foodsUpdated);
+      
+      console.log(foodUpdated)
+      setFoods(foodUpdated.data);
     } catch (err) {
       console.log(err);
     }
