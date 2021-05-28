@@ -6,11 +6,12 @@ import { Modal } from '../Modal';
 import { Input } from '../Input';
 
 interface FoodFormData {
-  id?: string;
-  image: string;
+  id: number;
   name: string;
-  price: string;
   description: string;
+  price: string;
+  available: boolean;
+  image: string;
 }
 
 interface ModalEditFoodProps {
@@ -24,6 +25,7 @@ export function ModalEditFood({ isOpen, setIsOpen, handleUpdateFood, editingFood
   const formRef = createRef();
 
   const handleSubmit = async (data: FoodFormData) => {
+    console.log(data);
     handleUpdateFood(data);
     setIsOpen();
   };

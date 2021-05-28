@@ -25,20 +25,12 @@
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
     },
     {
-      "image": "teste",
+      "image": "test",
       "name": "teste",
       "price": "19",
-      "description": "teste de prato",
+      "description": "test",
       "available": true,
       "id": 4
-    },
-    {
-      "image": "Teste",
-      "name": "teste",
-      "price": "19",
-      "description": "teste de desc",
-      "available": true,
-      "id": 5
     }
   ]
 }
